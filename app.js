@@ -1,5 +1,6 @@
 
 const yargs = require('yargs')
+const { listNotes } = require('./notes')
 const notes = require('./notes')
 
 
@@ -43,7 +44,7 @@ yargs.command({
     command: "list",
     describe: "List a note",
     handler: function(){
-        console.log("Listing a note")
+        notes.listNotes()
     }
 })
 // create a read command
